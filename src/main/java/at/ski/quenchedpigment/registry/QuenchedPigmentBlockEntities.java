@@ -12,9 +12,16 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 
 public class QuenchedPigmentBlockEntities  {
+
+    public static void registerTiles(BiConsumer<BlockEntityType<?>, Identifier> r) {
+        for (var e : BLOCK_ENTITIES.entrySet()) {
+            r.accept(e.getValue(), e.getKey());
+        }
+    }
 
     private static final Map<Identifier, BlockEntityType<?>> BLOCK_ENTITIES = new LinkedHashMap<>();
 

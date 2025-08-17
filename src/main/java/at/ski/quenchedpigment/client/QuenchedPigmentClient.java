@@ -11,6 +11,8 @@ import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 
 public class QuenchedPigmentClient implements ClientModInitializer {
 
+
+
     @Override
     public void onInitializeClient() {
 

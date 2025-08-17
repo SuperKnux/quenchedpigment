@@ -1,0 +1,50 @@
+[17:48:06] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.17.2
+[17:48:06] [main/DEBUG] (FabricLoader/GamePatch) Found game constructor: net.minecraft.client.main.Main -> net.minecraft.client.MinecraftClient
+[17:48:06] [main/DEBUG] (FabricLoader/GamePatch) Patching game constructor <init>(Lnet/minecraft/client/RunArgs;)V
+[17:48:06] [main/DEBUG] (FabricLoader/GamePatch) Run directory field is thought to be net/minecraft/client/MinecraftClient/runDirectory
+[17:48:06] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/client/ClientBrandRetriever::getClientModName
+[17:48:07] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/server/MinecraftServer::getServerModName
+[17:48:07] [main/DEBUG] (FabricLoader/Mappings) Loading mappings took 420.33 ms
+[17:48:07] [main/DEBUG] (FabricLoader/GamePatch) Patched 3 classs
+[17:48:07] [main/DEBUG] (FabricLoader/Discovery) Mod discovery time: 59.9 ms
+[17:48:07] [main/WARN] (FabricLoader/Resolution) Mod resolution failed
+[17:48:07] [main/INFO] (FabricLoader/Resolution) Immediate reason: [HARD_DEP_NO_CANDIDATE hexcasting 0.11.2-pre-701 {depends fabric-language-kotlin @ [>=1.9.4+kotlin.1.8.21]}, ROOT_FORCELOAD_SINGLE hexcasting 0.11.2-pre-701]
+[17:48:07] [main/INFO] (FabricLoader/Resolution) Reason: [HARD_DEP hexcasting 0.11.2-pre-701 {depends fabric-language-kotlin @ [>=1.9.4+kotlin.1.8.21]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends cardinal-components-base @ [~5.2.1]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends cardinal-components-entity @ [~5.2.1]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends cardinal-components-item @ [~5.2.1]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends cardinal-components-block @ [~5.2.1]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends paucal @ [>=0.6.0-pre <0.7.0]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends cloth-config @ [11.1.*]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends patchouli @ [>=1.20.1-80]}, HARD_DEP hexcasting 0.11.2-pre-701 {depends inline @ [>=1.20.1-1.0.1]}, HARD_DEP spectrum 1.8.5 {depends revelationary @ [*]}, HARD_DEP spectrum 1.8.5 {depends cloth-config @ [*]}, HARD_DEP spectrum 1.8.5 {depends modonomicon @ [>=1.77.3]}, HARD_DEP spectrum 1.8.5 {depends trinkets @ [*]}, HARD_DEP spectrum 1.8.5 {depends matchbooks @ [*]}]
+[17:48:07] [main/INFO] (FabricLoader/Resolution) Fix: add [add:fabric-language-kotlin 1.9.4+kotlin.1.8.21 ([[1.9.4+kotlin.1.8.21,∞)]), add:cardinal-components-base 5.2.1 ([[5.2.1,5.3-)]), add:cardinal-components-entity 5.2.1 ([[5.2.1,5.3-)]), add:cardinal-components-item 5.2.1 ([[5.2.1,5.3-)]), add:cardinal-components-block 5.2.1 ([[5.2.1,5.3-)]), add:paucal 0.6.0-pre ([[0.6.0-pre,0.7.0)]), add:cloth-config 11.1- ([[11.1-,11.2-)]), add:patchouli 1.20.1-80 ([[1.20.1-80,∞)]), add:inline 1.20.1-1.0.1 ([[1.20.1-1.0.1,∞)]), add:revelationary 1 ([(-∞,∞)]), add:modonomicon 1.77.3 ([[1.77.3,∞)]), add:trinkets 1 ([(-∞,∞)]), add:matchbooks 1 ([(-∞,∞)])], remove [], replace []
+[17:48:07] [main/ERROR] (FabricLoader) Incompatible mods found!
+net.fabricmc.loader.impl.FormattedException: Some of your mods are incompatible with the game or each other!
+A potential solution has been determined, this may resolve your problem:
+	 - Install fabric-language-kotlin, version 1.9.4+kotlin.1.8.21 or later.
+	 - Install cardinal-components-base, any version between 5.2.1 (inclusive) and 5.3- (exclusive).
+	 - Install cardinal-components-entity, any version between 5.2.1 (inclusive) and 5.3- (exclusive).
+	 - Install cardinal-components-item, any version between 5.2.1 (inclusive) and 5.3- (exclusive).
+	 - Install cardinal-components-block, any version between 5.2.1 (inclusive) and 5.3- (exclusive).
+	 - Install paucal, any version between 0.6.0-pre (inclusive) and 0.7.0 (exclusive).
+	 - Install cloth-config, any 11.1.x version.
+	 - Install patchouli, version 1.20.1-80 or later.
+	 - Install inline, version 1.20.1-1.0.1 or later.
+	 - Install revelationary, any version.
+	 - Install modonomicon, version 1.77.3 or later.
+	 - Install trinkets, any version.
+	 - Install matchbooks, any version.
+More details:
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires version 1.9.4+kotlin.1.8.21 or later of fabric-language-kotlin, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires any version between 5.2.1 (inclusive) and 5.3- (exclusive) of cardinal-components-base, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires any version between 5.2.1 (inclusive) and 5.3- (exclusive) of cardinal-components-entity, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires any version between 5.2.1 (inclusive) and 5.3- (exclusive) of cardinal-components-item, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires any version between 5.2.1 (inclusive) and 5.3- (exclusive) of cardinal-components-block, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires any version between 0.6.0-pre (inclusive) and 0.7.0 (exclusive) of paucal, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires any 11.1.x version of cloth-config, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires version 1.20.1-80 or later of patchouli, which is missing!
+	 - Mod 'Hex Casting' (hexcasting) 0.11.2-pre-701 requires version 1.20.1-1.0.1 or later of inline, which is missing!
+	 - Mod 'Spectrum' (spectrum) 1.8.5 requires any version of revelationary, which is missing!
+	 - Mod 'Spectrum' (spectrum) 1.8.5 requires any version of cloth-config, which is missing!
+	 - Mod 'Spectrum' (spectrum) 1.8.5 requires version 1.77.3 or later of modonomicon, which is missing!
+	 - Mod 'Spectrum' (spectrum) 1.8.5 requires any version of trinkets, which is missing!
+	 - Mod 'Spectrum' (spectrum) 1.8.5 requires any version of matchbooks, which is missing!
+	at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.17.2.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:202) ~[fabric-loader-0.17.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:142) ~[fabric-loader-0.17.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:66) ~[fabric-loader-0.17.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.17.2.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[?:?]

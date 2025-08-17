@@ -74,21 +74,21 @@ public class QuenchedClientRegistry {
 
     public static void registerBlockEntityRenderers(@NotNull BlockEntityRendererRegisterererer registerer) {
         registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_WHITE_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_ORANGE_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_MAGENTA_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_LIGHT_BLUE_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_YELLOW_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_LIME_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_PINK_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_GRAY_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_LIGHT_GRAY_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_CYAN_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_PURPLE_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_BLUE_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_BROWN_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_GREEN_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_RED_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
-        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_BLACK_PIGMENT_TILE, BlockEntityQuenchedAllayRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_ORANGE_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_MAGENTA_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_LIGHT_BLUE_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_YELLOW_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_LIME_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_PINK_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_GRAY_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_LIGHT_GRAY_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_CYAN_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_PURPLE_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_BLUE_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_BROWN_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_GREEN_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_RED_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
+        registerer.registerBlockEntityRenderer(QuenchedPigmentBlockEntities.QUENCHED_BLACK_PIGMENT_TILE, BlockEntityQuenchedPigmentRenderer::new);
 
     }
 

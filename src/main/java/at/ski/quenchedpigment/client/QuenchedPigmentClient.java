@@ -17,10 +17,8 @@ public class QuenchedPigmentClient implements ClientModInitializer {
         QuenchedClientRegistry.registerBlockEntityRenderers(new QuenchedClientRegistry.BlockEntityRendererRegisterererer() {
 
             @Override
-            public <T extends BlockEntity> void registerBlockEntityRenderer(BlockEntityType<T> type, BlockEntityRendererFactory<? super T> berp) {
-                {
-                    BlockEntityRendererFactories.register(type, berp);
-                }
+            public <T extends BlockEntity> void registerBlockEntityRenderer(BlockEntityType<? extends T> type, BlockEntityRendererFactory<T> berp) {
+                BlockEntityRendererFactories.register(type, berp);
             }
         });
     }

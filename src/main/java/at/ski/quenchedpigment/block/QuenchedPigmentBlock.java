@@ -15,6 +15,8 @@ import java.util.Locale;
 import java.util.Optional;
 
 import static at.ski.quenchedpigment.QuenchedPigment.MOD_ID;
+import static at.ski.quenchedpigment.registry.QuenchedPigmentBlocks.*;
+
 
 public class QuenchedPigmentBlock extends BlockQuenchedAllay implements ColorableBlock {
 
@@ -39,27 +41,29 @@ public class QuenchedPigmentBlock extends BlockQuenchedAllay implements Colorabl
             return false;
         }
 
-        String newBlock = switch (dyeColorColor) {
-            case "light_blue" -> "quenched_light_blue_block";
-            case "light_gray" -> "quenched_light_gray_block";
-            case "white" -> "quenched_white_block";
-            case "orange" -> "quenched_orange_block";
-            case "magenta" -> "quenched_magenta_block";
-            case "yellow" -> "quenched_yellow_block";
-            case "lime" -> "quenched_lime_block";
-            case "pink" -> "quenched_pink_block";
-            case "gray" -> "quenched_gray_block";
-            case "cyan" -> "quenched_cyan_block";
-            case "purple" -> "quenched_purple_block";
-            case "blue" -> "quenched_blue_block";
-            case "brown" -> "quenched_brown_block";
-            case "green" -> "quenched_green_block";
-            case "red" -> "quenched_red_block";
-            case "black" -> "quenched_black_block";
-            default -> throw new IllegalStateException("Unexpected value: " + dyeColorColor);
+        QuenchedPigmentBlock newBlock = switch (dyeColor) {
+            case LIGHT_BLUE -> QUENCHED_LIGHT_BLUE_BLOCK;
+            case LIGHT_GRAY -> QUENCHED_LIGHT_GRAY_BLOCK;
+            case WHITE -> QUENCHED_WHITE_BLOCK;
+            case ORANGE -> QUENCHED_ORANGE_BLOCK;
+            case MAGENTA -> QUENCHED_MAGENTA_BLOCK;
+            case YELLOW -> QUENCHED_YELLOW_BLOCK;
+            case LIME -> QUENCHED_LIME_BLOCK;
+            case PINK -> QUENCHED_PINK_BLOCK;
+            case GRAY -> QUENCHED_GRAY_BLOCK;
+            case CYAN -> QUENCHED_CYAN_BLOCK;
+            case PURPLE -> QUENCHED_PURPLE_BLOCK;
+            case BLUE -> QUENCHED_BLUE_BLOCK;
+            case BROWN -> QUENCHED_BROWN_BLOCK;
+            case GREEN -> QUENCHED_GREEN_BLOCK;
+            case RED -> QUENCHED_RED_BLOCK;
+            case BLACK -> QUENCHED_BLACK_BLOCK;
+            default -> throw new IllegalStateException("Unexpected value: " + dyeColor);
         };
 
-        BlockState newState = Registries.BLOCK.get(Identifier.of(MOD_ID, newBlock)).getDefaultState();
+
+
+        BlockState newState = newBlock.getDefaultState();
 
         world.setBlockState(blockPos, newState);
         return true;

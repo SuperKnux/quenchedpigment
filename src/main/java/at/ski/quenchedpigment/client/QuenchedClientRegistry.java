@@ -4,6 +4,7 @@ import at.petrak.hexcasting.client.RegisterClientStuff;
 import at.petrak.hexcasting.client.render.GaslightingTracker;
 import at.petrak.hexcasting.client.render.be.BlockEntityQuenchedAllayRenderer;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions;
+import at.ski.quenchedpigment.entity.BlockEntityQuenchedPigment;
 import at.ski.quenchedpigment.registry.QuenchedPigmentBlockEntities;
 import at.ski.quenchedpigment.registry.QuenchedPigmentBlocks;
 import de.dafuqs.spectrum.helpers.ColorHelper;
@@ -61,8 +62,8 @@ public class QuenchedClientRegistry {
 
     @FunctionalInterface
     public interface BlockEntityRendererRegisterererer {
-        <T extends BlockEntity> void registerBlockEntityRenderer(BlockEntityType<T> type,
-                                                                 BlockEntityRendererFactory<? super T> berp);
+        <T extends BlockEntity> void registerBlockEntityRenderer(BlockEntityType<? extends T> type,
+                                                                 BlockEntityRendererFactory<T> berp);
     }
 
 

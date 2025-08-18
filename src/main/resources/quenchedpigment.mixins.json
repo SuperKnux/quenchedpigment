@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "at.ski.quenchedpigment.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "client.ModelManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -23,9 +23,8 @@ public class ModelManagerMixin {
     @Shadow
     private Map<Identifier, BakedModel>models;
 
-    @Inject(at = @At(value = "INVOKE_ASSIGN", target = ""))
-
-    private void onModelBake(ModelLoader modelLoader, ResourceManager resourceManager, Profiler profiler, CallbackInfo ci) {
-        QuenchedClientRegistry.onModelBake(modelLoader, this.models);
+    @Inject(method = "upload", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/client/render/model/ModelLoader;getBakedModelMap()Ljava/util/Map;", shift = At.Shift.AFTER))
+    private void onModelBake(BakedModelManager.BakingResult bakingResult, Profiler profiler, CallbackInfo ci) {
+        QuenchedClientRegistry.onModelBake(bakingResult.modelLoader(), this.models);
     }
 }

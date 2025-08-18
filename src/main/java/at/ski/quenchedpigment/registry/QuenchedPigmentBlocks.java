@@ -1,5 +1,6 @@
 package at.ski.quenchedpigment.registry;
 
+import at.petrak.hexcasting.common.blocks.BlockQuenchedAllay;
 import at.ski.quenchedpigment.block.QuenchedPigmentBlock;
 import de.dafuqs.fractal.api.ItemSubGroup;
 import de.dafuqs.spectrum.helpers.ColorHelper;

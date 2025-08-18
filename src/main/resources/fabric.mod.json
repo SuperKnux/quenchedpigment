@@ -20,6 +20,7 @@
       "at.ski.quenchedpigment.QuenchedPigment"
     ]
   },
+  "accesswidener": "quenchedpigment.accesswidener",
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",

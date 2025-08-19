@@ -16,6 +16,8 @@ public class QuenchedPigmentClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
+        QuenchedClientRegistry.init();
+
         QuenchedClientRegistry.registerBlockEntityRenderers(new QuenchedClientRegistry.BlockEntityRendererRegisterererer() {
 
             @Override

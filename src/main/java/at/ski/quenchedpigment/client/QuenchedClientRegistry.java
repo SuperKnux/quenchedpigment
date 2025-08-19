@@ -114,8 +114,4 @@ public class QuenchedClientRegistry {
             QUENCHED_PIGMENT_VARIANTS.put(blockLoc, list);
         }
     }
-
-
-
-
 }

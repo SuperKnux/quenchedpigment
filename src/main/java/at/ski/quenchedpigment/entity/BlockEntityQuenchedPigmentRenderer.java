@@ -48,7 +48,7 @@ public class BlockEntityQuenchedPigmentRenderer implements BlockEntityRenderer<B
         }
     }
 
-    public boolean shouldRenderOffScreen(BlockEntityQuenchedPigment blockEntity) {
+    public boolean rendersOutsideBoundingBox(BlockEntityQuenchedPigment blockEntity) {
         return false;
     }
 }

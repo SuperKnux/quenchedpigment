@@ -2,6 +2,7 @@ package at.ski.quenchedpigment.client;
 
 import at.petrak.hexcasting.client.RegisterClientStuff;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.impl.client.rendering.BlockEntityRendererRegistryImpl;
 import net.minecraft.block.entity.BlockEntity;
@@ -25,5 +26,8 @@ public class QuenchedPigmentClient implements ClientModInitializer {
                 BlockEntityRendererFactories.register(type, berp);
             }
         });
+
+        ModelLoadingRegistry.INSTANCE.registerModelProvider(QuenchedClientRegistry::onModelRegister);
     }
+
 }

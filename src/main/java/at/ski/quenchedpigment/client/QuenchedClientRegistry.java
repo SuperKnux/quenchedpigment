@@ -4,6 +4,7 @@ import at.petrak.hexcasting.client.RegisterClientStuff;
 import at.petrak.hexcasting.client.render.GaslightingTracker;
 import at.petrak.hexcasting.client.render.be.BlockEntityQuenchedAllayRenderer;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions;
+import at.ski.quenchedpigment.QuenchedPigment;
 import at.ski.quenchedpigment.block.QuenchedPigmentBlock;
 import at.ski.quenchedpigment.entity.BlockEntityQuenchedPigment;
 import at.ski.quenchedpigment.entity.BlockEntityQuenchedPigmentRenderer;
@@ -20,13 +21,16 @@ import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.ModelLoader;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
+import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
+import static at.ski.quenchedpigment.QuenchedPigment.locate;
 
 public class QuenchedClientRegistry {
 
@@ -98,6 +102,19 @@ public class QuenchedClientRegistry {
                                                                  BlockEntityRendererFactory<T> berp);
     }
 
+    public static void onModelRegister(ResourceManager recMen, Consumer<Identifier> extraModels) {
+        for (var type : QUENCHED_PIGMENT_TYPES.entrySet()) {
+            var blockLoc = Registries.BLOCK.getKey(type.getKey());
+            var locStart = "block/";
+            if (type.getValue())
+                locStart += "deco/";
+
+            for (int i = 0; i < QuenchedPigmentBlock.VARIANTS; i++) {
+                extraModels.accept(locate( locStart + blockLoc.toString() + "_" + i));
+            }
+        }
+    }
+
     public static void onModelBake(ModelLoader loader, Map<Identifier, BakedModel> map) {
         for (var type : QUENCHED_PIGMENT_TYPES.entrySet()) {
             var blockLoc = Registries.BLOCK.getId(type.getKey());
@@ -107,7 +124,7 @@ public class QuenchedClientRegistry {
 
             var list = new ArrayList<BakedModel>();
             for (int i = 0; i < QuenchedPigmentBlock.VARIANTS; i++) {
-                var variantLoc = modLoc(locStart + blockLoc.getPath() + "_" + i);
+                var variantLoc = locate(locStart + blockLoc.getPath() + "_" + i);
                 var model = map.get(variantLoc);
                 list.add(model);
             }
